@@ -1,0 +1,8 @@
+{
+  "name": "ip-address-tracker",
+  "version": "1.0.0",
+  "repository": "https://github.com/richardcyrus/fm-ip-address-tracker.git",
+  "author": "Richard Cyrus <richard.cyrus@rcyrus.com>",
+  "license": "MIT",
+  "private": true
+}
