@@ -10,6 +10,8 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+- [What I learned](#what-i-learned)
+
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -37,6 +39,8 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/richardcyrus/fm-ip-address-tracker)
+- [Live Site URL](https://fm-ip-address-tracker-mu.vercel.app/)
+
 
 ## My process
 
@@ -48,11 +52,17 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
+### What I learned
+
+- How to create a Vercel Serverless function. This allows me to keep from exposing the IPify API credentials in my JavaScript code.
+
 ### Useful resources
 
 - [A Modern CSS Reset](https://piccalil.li/blog/a-modern-css-reset/)
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Serverless Functions on Vercel](https://blog.iamsainikhil.com/article/serverless-functions-vercel)
+- [Make a Simple API Endpoint with Vercel Serverless Functions](https://scottspence.com/2020/12/27/make-a-simple-api-endpoint-with-vercel/)
 - [CSS in Action: Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/)
 
 

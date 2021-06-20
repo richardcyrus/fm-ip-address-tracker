@@ -4,5 +4,16 @@
   "repository": "https://github.com/richardcyrus/fm-ip-address-tracker.git",
   "author": "Richard Cyrus <richard.cyrus@rcyrus.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@vercel/node": "^1.11.1",
+    "vercel": "^23.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  }
 }

@@ -202,3 +202,5 @@ typings/
 
 *.min.css
 *.min.js
+
+.vercel
