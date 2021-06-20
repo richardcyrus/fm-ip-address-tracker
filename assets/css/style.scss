@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+/*#region Modern CSS Reset*/
+/*
+ * Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests
+  * default styling will be removed
+  */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*#endregion*/
+
+/*#region Attribution*/
+.attribution {
+  font-size: 0.6875rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*#endregion*/
+
+:root {
+  --color-dark-gray: #969696;
+  --color-very-dark-gray: #2c2c2c;
+  --font-family: 'Rubik', sans-serif;
+  --font-size-text: 1.125rem;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --default-padding: 1.5rem;
+  --font-size-title: 1.625rem;
+  --border-radius: 0.9375rem;
+  --box-shadow: 0 3.125rem 3.125rem -1.5625rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-regular);
+}
+
+.sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+/*#region Header */
+.container__header {
+  height: 18.75rem;
+  overflow: hidden;
+  padding-left: var(--default-padding);
+  padding-right: var(--default-padding);
+  position: relative;
+
+  &::before {
+    background-image: url(../images/pattern-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.app__title {
+  color: #ffffff;
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.014375rem;
+  line-height: 1.875rem;
+  margin-top: 1.625rem;
+  text-align: center;
+}
+
+.form__control {
+  margin-top: 1.8125rem;
+}
+
+.input__group {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  align-items: center;
+  align-self: flex-start;
+  background-color: #000000;
+  // background-color: transparent;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  justify-content: center;
+  min-height: 3.625rem;
+  min-width: 3.625rem;
+  padding: 0;
+  text-align: center;
+  transition: 220ms all ease-in-out;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentColor;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #3f3f3f;
+  }
+  &:focus {
+    box-shadow: 0 0 0 4px scale-color(#3f3f3f, $lightness: 40%);
+    outline-color: transparent;
+    outline-style: solid;
+  }
+}
+
+input[type='text'] {
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--color-very-dark-gray);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-regular);
+  padding-left: 1rem;
+  width: 100%;
+}
+
+::placeholder {
+  color: var(--color-very-dark-gray);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  opacity: 0.5;
+}
+/*#endregion */
+
+/*#region Details Panel */
+.details__panel {
+  align-items: center;
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: -7.6875rem;
+  padding: var(--default-padding);
+}
+
+.details__block {
+  text-align: center;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+}
+
+.details__label {
+  color: rgba(44, 44, 44, 0.5);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.09125rem;
+  text-transform: uppercase;
+}
+
+.details__value {
+  color: var(--color-very-dark-gray);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.01125rem;
+  line-height: 1.5rem;
+}
+
+/*#endregion */
+
+/*#region Map */
+#map {
+  height: 33rem;
+  margin-top: -9.5625rem;
+  z-index: -1;
+
+  @media screen and (min-width: 87.5em) {
+    height: 32.875rem;
+  }
+}
+/*#endregion */
