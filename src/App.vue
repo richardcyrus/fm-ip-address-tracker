@@ -42,6 +42,7 @@ import Map from './components/Map.vue'
 import IpDetails from './components/IpDetails.vue'
 import validator from 'validator'
 import IpifyDataService from './services/IpifyDataService'
+import axios from 'axios'
 
 export default {
   components: { Map, IpDetails },
@@ -88,10 +89,17 @@ export default {
     },
     initializeApp() {
       // Get the user's current IP.
-      IpifyDataService.getDefault()
-        .then((response) => {
-          const { ip, location, isp } = response.data
-          this.setSearchResults(ip, location, isp)
+      axios.get('https://freegeoip.app/json/')
+        .then(response => {
+          return response.data.ip
+        })
+        .then(clientIp => {
+          IpifyDataService.getByIp(clientIp)
+            .then((response) => {
+              const { ip, location, isp } = response.data
+              this.setSearchResults(ip, location, isp)
+            })
+            .catch((err) => console.error(err))
         })
         .catch((err) => console.error(err))
     },
