@@ -11,7 +11,6 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
 - [What I learned](#what-i-learned)
-
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -29,6 +28,9 @@ Users should be able to:
 - Search for any IP addresses or domains and see the key information and location
 
 ### Screenshot
+
+- [Mobile](./design/screenshots/mobile-screenshot.png)
+- [Desktop](./design/screenshots/desktop-screenshot.png)
 
 #### Reference Design
 
@@ -64,7 +66,10 @@ Users should be able to:
 - [Serverless Functions on Vercel](https://blog.iamsainikhil.com/article/serverless-functions-vercel)
 - [Make a Simple API Endpoint with Vercel Serverless Functions](https://scottspence.com/2020/12/27/make-a-simple-api-endpoint-with-vercel/)
 - [CSS in Action: Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/)
-
+- [Vue 3 CRUD example with Axios & Vue Router](https://bezkoder.com/vue-3-crud/)
+- [Building an interactive map with Vue and Leaflet](https://blog.logrocket.com/building-an-interactive-map-with-vue-and-leaflet/)
+- [Serverless Functions on Vercel](https://blog.iamsainikhil.com/article/serverless-functions-vercel)
+- [Using Vite On Vercel](https://t3.gg/blog/posts/vite-vercel)
 
 ## Author
 
