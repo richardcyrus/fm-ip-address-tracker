@@ -7,13 +7,24 @@
   "private": true,
   "devDependencies": {
     "@vercel/node": "^1.11.1",
-    "vercel": "^23.0.1"
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.29.0",
+    "vercel": "^23.0.1",
+    "vite": "^2.3.7"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "leaflet": "^1.7.1",
+    "validator": "^13.6.0",
+    "vue": "^3.1.1"
   },
   "scripts": {
-    "start": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "deploy": "vercel deploy --prod",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "vercel-dev-helper": "vite --port $PORT",
+    "vercel:dev": "vercel dev --local-config ./vercel-dev.json"
   }
 }

@@ -204,3 +204,5 @@ typings/
 *.min.js
 
 .vercel
+dist
+dist-ssr

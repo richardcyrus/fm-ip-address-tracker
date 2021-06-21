@@ -5,56 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor | IP Address Tracker</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
-      integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./src/assets/css/style.css">
   </head>
   <body>
-    <section class="container">
-      <header class="container__header">
-        <h1 class="app__title">IP Address Tracker</h1>
-        <div class="form__control">
-          <div class="input__group">
-            <label for="search" class="sr-only">Search for any IP address or domain</label>
-            <input type="text" placeholder="Search for any IP address or domain" name="search" id="search">
-            <button type="button" class="button" aria-label="Start search">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" width="11" height="14">
-                <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
-      <div class="details__panel">
-        <div class="details__block">
-          <p class="details__label">IP Address</p>
-          <p class="details__value" id="ip-address">192.212.174.101</p>
-        </div>
-        <div class="details__block">
-          <p class="details__label">Location</p>
-          <p class="details__value" id="location">Brooklyn, NY 10001</p>
-        </div>
-        <div class="details__block">
-          <p class="details__label">Timezone</p>
-          <p class="details__value">UTC <span id="timezone">-05:00</span></p>
-        </div>
-        <div class="details__block">
-          <p class="details__label">ISP</p>
-          <p class="details__value" id="isp">SpaceX Starlink</p>
-        </div>
-      </div>
-      <div id="map"></div>
+    <section id="app" class="container">
     </section>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://www.richardcyrus.com">Richard Cyrus</a>.
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"
-      integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
