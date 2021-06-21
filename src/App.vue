@@ -45,23 +45,21 @@ import IpifyDataService from './services/IpifyDataService'
 
 export default {
   components: { Map, IpDetails },
-  data () {
+  data() {
     return {
-      latitude: 40.80427,
-      longitude: -74.01208,
+      latitude: null,
+      longitude: null,
       searchTerm: '',
       ipDetails: {
-        ipAddress: '192.212.174.101',
-        location: 'Brooklyn, NY 10001',
-        timezone: '-05:00',
-        isp: 'SpaceX Starlink',
+        ipAddress: '',
+        location: '',
+        timezone: '',
+        isp: '',
       },
     }
   },
   methods: {
-    search () {
-      // console.log(this.searchTerm)
-
+    search() {
       if (validator.isFQDN(this.searchTerm)) {
         IpifyDataService.getByDomain(this.searchTerm)
           .then((response) => {
@@ -79,7 +77,7 @@ export default {
       }
       this.searchTerm = ''
     },
-    setSearchResults (ip, location, isp) {
+    setSearchResults(ip, location, isp) {
       this.ipDetails.ipAddress = ip
       this.ipDetails.location = `${location.city}, ${location.region} ${location.postalCode}`
       this.ipDetails.timezone = location.timezone
@@ -88,6 +86,18 @@ export default {
       this.latitude = location.lat
       this.longitude = location.lng
     },
+    initializeApp() {
+      // Get the user's current IP.
+      IpifyDataService.getDefault()
+        .then((response) => {
+          const { ip, location, isp } = response.data
+          this.setSearchResults(ip, location, isp)
+        })
+        .catch((err) => console.error(err))
+    },
+  },
+  mounted() {
+    this.initializeApp()
   },
 }
 </script>
