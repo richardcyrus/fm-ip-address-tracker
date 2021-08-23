@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/richardcyrus/fm-ip-address-tracker)
+- [Solution URL](https://www.frontendmentor.io/solutions/ip-address-tracker-vue-3-NIRkX4lYu)
 - [Live Site URL](https://fm-ip-address-tracker-mu.vercel.app/)
 
 
@@ -74,4 +74,4 @@ Users should be able to:
 ## Author
 
 - Website - [www.richardcyrus.com](https://www.richardcyrus.com)
-- Frontend Mentor - [@richarcyrus](https://www.frontendmentor.io/profile/richarcyrus)
+- Frontend Mentor - [@richardcyrus](https://www.frontendmentor.io/profile/richardcyrus)
