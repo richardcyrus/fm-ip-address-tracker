@@ -89,11 +89,12 @@ export default {
     },
     initializeApp() {
       // Get the user's current IP.
-      axios.get('https://api.ipify.org?format=json')
-        .then(response => {
+      axios
+        .get('https://api.ipify.org?format=json')
+        .then((response) => {
           return response.data.ip
         })
-        .then(clientIp => {
+        .then((clientIp) => {
           IpifyDataService.getByIp(clientIp)
             .then((response) => {
               const { ip, location, isp } = response.data

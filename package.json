@@ -6,18 +6,19 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@vercel/node": "^1.11.1",
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.0.5",
-    "eslint": "^7.29.0",
-    "vercel": "^23.0.1",
-    "vite": "^2.3.7"
+    "@vercel/node": "^2.15.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.3.4",
+    "eslint": "^8.44.0",
+    "vercel": "^31.0.1",
+    "vite": "^4.3.9"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "leaflet": "^1.7.1",
-    "validator": "^13.6.0",
-    "vue": "^3.1.1"
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "leaflet": "^1.9.4",
+    "validator": "^13.9.0",
+    "vue": "^3.3.4"
   },
   "scripts": {
     "deploy": "vercel deploy --prod",
@@ -26,5 +27,8 @@
     "serve": "vite preview",
     "vercel-dev-helper": "vite --port $PORT",
     "vercel:dev": "vercel dev --local-config ./vercel-dev.json"
+  },
+  "volta": {
+    "node": "18.16.1"
   }
 }

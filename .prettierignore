@@ -2,4 +2,5 @@
 .idea
 .nova
 .vscode
+.vercel
 node_modules/

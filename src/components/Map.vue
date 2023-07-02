@@ -20,7 +20,7 @@ export default {
         iconUrl: locationIcon,
         iconSize: [46, 56],
         iconAnchor: [26, 56],
-      })
+      }),
     }
   },
   watch: {
@@ -43,9 +43,9 @@ export default {
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(this.mapDiv)
 
-      L.marker([this.latitude, this.longitude], { icon: this.markerIcon }).addTo(
-        this.mapDiv
-      )
+      L.marker([this.latitude, this.longitude], {
+        icon: this.markerIcon,
+      }).addTo(this.mapDiv)
     },
     replaceMap() {
       this.mapDiv.remove()
