@@ -90,7 +90,7 @@ export default {
     initializeApp() {
       // Get the user's current IP.
       axios
-        .get('https://api.ipify.org?format=json')
+        .get('https://api64.ipify.org?format=json')
         .then((response) => {
           return response.data.ip
         })
